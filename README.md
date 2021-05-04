@@ -2,12 +2,15 @@
 # Ecoa/Bioinsight recruitment test
 
 Thank you for taking this test as part of the recruitment process.
-Please read this content carefully.
+Please read this content carefully. If you find any issue with the data
+or critical question please contact with
+<a href="mailto:paulo.c@bioinsight.pt" class="email">paulo.c@bioinsight.pt</a>.
 
 ## Preparation
 
 We strongly suggest you to use the latest version of R and possibly
-RStudio. You can install R from [CRAN](https://CRAN.R-project.org) and
+RStudio. Please let us know as soon as possible if this may be an issue
+for you. You can install R from [CRAN](https://CRAN.R-project.org) and
 Rstudio from [RStudio
 website](https://www.rstudio.com/products/rstudio-desktop-pro/download-commercial/).
 
@@ -17,38 +20,44 @@ We’ve prepared two small tests for this recruitment process. The idea is
 that you will build the best approach to the problem and answer to the
 specific questions they propose. You will be asked to send us your
 approach and the main outputs in a short data report by Friday 7th.
+Remember that it will require a suite of packages: tidyverse, sf,
+data.table here, scales, raster, ggplot, and its dependencies.
 
 ## Report Detail
 
-Your report must include a short description of your outputs (maps,
-figures or tables) necessary to answer the questions. The code used must
-be provided with the report.
+Your report must include answers to the questions with a a short
+description of your outputs (maps, figures or tables) as well as the
+code used.
 
-## Presentation
+## Your presentation
 
-You will prepare and present a 10 minutes talk about your achievements
-for each test focusing on the problem while answering to the questions
-and details you may think will help to understand it.  
-You can use a R Markdown presentation, a PowerPoint presentation or any
-other resource to present it.
+You will prepare and present a 10 minutes talk with your achievements
+for each test, focusing on the proposed questions and answering to the
+questions. Add the details you may think will help to understand it. You
+can use a R Markdown presentation, a PowerPoint presentation or any
+other resource that best fits your needs.
 
 ## Test 1 - Wind Energy Production in Portugal
 
 ### Main questions
 
--   Map wind energy facilities spatially distributed in mainland
-    Portugal.
--   Describe the pattern and its relation with altitude and protected
-    areas.
+-   Map the wind energy facilities in mainland Portugal regarding the
+    country and district borders. Apply the appropriate legend and
+    choose one aggregation level (legend) to wind energy facilities.
+-   Map the wind facilities and and its distribution regarding elevation
+    and protected areas.
+-   Find the the appropriate theme for the digital elevation model.
 -   What is the total national installed capacity (in GW)?
+-   How facilities are distributed in relation to altitude? plot the
+    attitudinal distribution and describe.
 -   How it has grown since the first installed facility?
--   How it is distributed in the landscape?
--   Are protected areas affected? Where?
+-   Are protected areas affected? Where and to which extent (number of
+    Sites)?
 
-### Challenge
+### Challenge 1
 
-Build an interactive map where one can query for each facility the name,
-year of construction and installed capacity (using e2p data).
+Build an interactive map where one can query for each facility its name,
+year of commissioning and installed capacity (using e2p data).
 
 ### Data
 
@@ -65,18 +74,63 @@ You will find the baseline data to work in the \~.R/test1/ folder.
 
 ### Questions
 
--   Map bird movements.
+-   Describe the number of bird movements/hour.
+-   Describe mean flight height/hour.
+-   Are there any difference between mean number of bird movements/h
+    distinguishing day and night?
+-   Are there any difference between mean flight altitude distinguishing
+    day and night?
+
+### Challenge 2
+
 -   Describe the pattern of bird movement in relation to tide height and
     distance to next high tide.
 
-Suggestion: retain the first observation of each movement to map the
-dist
+Suggestion: retain the first observation of each bird movement to map
+the distance for next high tide.
 
 ### Data
 
 You will find the baseline data to work in the \~.R/test2/ folder.
 
-| Data     | Description                                                        |
-|----------|--------------------------------------------------------------------|
-| bird.rda | location of wind farms with name, date, coordinates and production |
-| tide.rda | Administrative boundary of Portugal ( level 0 )                    |
+| Data            | Description                                                     |
+|-----------------|-----------------------------------------------------------------|
+| bird\_track.rda | track points of individual birds. Unique ID in column track\_id |
+| tidepeak.rda    | 2020 and 2021 tide peak time and height for Lisbon port         |
+
+#### Bird track data description
+
+| Column    | Description                        |
+|-----------|------------------------------------|
+| date\_l   | datetime of every record           |
+| track\_id | unique ID for a single movement    |
+| speed     | ground speed for the record        |
+| heading   | compass orientation for the record |
+| altm      | altitude in meter for the record   |
+
+Data are GPS-PPT like. Every line is a position. Individual movements
+are identified by a single unique ID (track\_id). A few variables are
+available for every position but can be a NULL/NA (fail to record).
+
+### Notes & Tips
+
+-   Take care with projections. Data are provided in geophafic and
+    projected reference systems.
+
+-   Use a raster elevation model to get elevation data from.
+
+-   Remember that some approaches will be easy with data.table package
+    (specially roll join).
+
+-   If running your analysis from Windows, you can import data directly
+    from github with:
+
+<!-- -->
+
+    dat_url <- 'https://raw.githubusercontent.com/pecard/testeR/master/data/e2p.rda?raw=true'
+    download.file(dat_url,"e2p", method="curl")
+    load("e2p")
+    e2p
+
+Or you can simply download the data from the repository into a local
+folder.
