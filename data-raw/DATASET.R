@@ -28,21 +28,3 @@ adm1_pt <- sf::read_sf('D:/Google Drive/sig/bd_elementos_sig_projetos.gpkg', 'ad
 plot(adm1_pt)
 usethis::use_data(adm1_pt, overwrite = TRUE)
 
-
-library(RPostgreSQL)
-try(conn <- dbConnect(PostgreSQL(),
-                      dbname = "postgres",
-                      port = 5432,
-                      user = "postgres",
-                      password = "100874"))
-
-con <- dbConnect(
-  RPostgres::Postgres(),
-  host = "localhost",
-  dbname = "postgres",
-  port = 5432,
-  user = "postgres",
-  password = "mysecretpassword"
-)
-
-st_read_db

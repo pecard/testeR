@@ -34,12 +34,12 @@ code used.
 You will prepare and present a 10 minutes talk with your achievements
 for each test, focusing on the proposed questions and answering to the
 questions. Add the details you may think will help to understand it. You
-can use a R Markdown presentation, a PowerPoint presentation or any
+can use a R Markdown presentation, a Power Point presentation or any
 other resource that best fits your needs.
 
 ## Test 1 - Wind Energy Production in Portugal
 
-### Main questions
+### Questions
 
 -   Map the wind energy facilities in mainland Portugal regarding the
     country and district borders. Apply the appropriate legend and
@@ -114,8 +114,8 @@ available for every position but can be a NULL/NA (fail to record).
 
 ### Notes & Tips
 
--   Take care with projections. Data are provided in geophafic and
-    projected reference systems.
+-   Take care with projections. Data are provided in geographic (WGS84
+    EPSG 4326) and projected reference systems (PT-TM06 EPSG 3763).
 
 -   Use a raster elevation model to get elevation data from.
 
@@ -132,5 +132,5 @@ available for every position but can be a NULL/NA (fail to record).
     load("e2p")
     e2p
 
-Or you can simply download the data from the repository into a local
-folder.
+Instead, you can simply download the data from the repository into a
+local folder.
