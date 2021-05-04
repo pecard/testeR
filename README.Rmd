@@ -43,25 +43,20 @@ You will find the baseline data to work in the ~.R/test1/ folder.
 | adm1_pt.rda | Administrative boundary of Portugal ( level 0 ) |
 | rn2000.rda | Natura 2000 Sites  |
 
-## Test 2 - Wind Energy Production in Portugal
+## Test 2 - Bird movement and tide height
 
 ### Questions
-- Map wind energy facilities spatially distributed in mainland Portugal.
-- Describe the pattern and its relation with altitude and protected areas.
-- What is the total national installed capacity (in GW)? 
-- How it has grown since the first installed facility?
-- How it is distributed in the landscape?
-- Are protected areas affected? Where?
+- Map bird movements.
+- Describe the pattern of bird movement in relation to tide height and distance to next high tide.
+
+Suggestion: retain the first observation of each movement to map the dist
 
 ### Data
-You will find the baseline data to work in the ~.R/test1/ folder.
+You will find the baseline data to work in the ~.R/test2/ folder.
 
 
 | Data | Description |
 | ------ | ------ |
-| e2p.rda | location of wind farms with name, date, coordinates and production |
-| adm0_pt.rda | Administrative boundary of Portugal ( level 0 ) |
-| adm1_pt.rda | Administrative boundary of Portugal ( level 0 ) |
-| rn2000.rda | Natura 2000 Sites  |
-
+| bird.rda | location of wind farms with name, date, coordinates and production |
+| tide.rda | Administrative boundary of Portugal ( level 0 ) |
 

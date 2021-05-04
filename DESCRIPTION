@@ -18,3 +18,5 @@ Suggests:
 Language: en-GB
 URL: https://github.com/pecard/testeR
 BugReports: https://github.com/pecard/testeR/issues
+Depends: 
+    R (>= 2.10)
