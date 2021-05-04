@@ -61,7 +61,7 @@ year of commissioning and installed capacity (using e2p data).
 
 ### Data
 
-You will find the baseline data to work in the \~.R/test1/ folder.
+You will find the data to work in the \~.data/ folder.
 
 | Data         | Description                                                        |
 |--------------|--------------------------------------------------------------------|
@@ -76,10 +76,10 @@ You will find the baseline data to work in the \~.R/test1/ folder.
 
 -   Describe the number of bird movements/hour.
 -   Describe mean flight height/hour.
--   Are there any difference between mean number of bird movements/h
-    distinguishing day and night?
--   Are there any difference between mean flight altitude distinguishing
-    day and night?
+-   Are there any differences between mean number of bird movements/hour
+    if you distinguish day and night periods?
+-   Are there any differences between mean flight altitude/hour if you
+    distinguish day and night periods?
 
 ### Challenge 2
 
@@ -91,7 +91,7 @@ the distance for next high tide.
 
 ### Data
 
-You will find the baseline data to work in the \~.R/test2/ folder.
+You will find the required data to work in the \~.data/ folder.
 
 | Data            | Description                                                     |
 |-----------------|-----------------------------------------------------------------|
