@@ -1,3 +1,5 @@
+R Language mini test
+================
 
 # Ecoa/Bioinsight recruitment test
 
@@ -108,22 +110,54 @@ You will find the required data to work in the \~.data/ folder.
 | heading   | compass orientation for the record |
 | altm      | altitude in meter for the record   |
 
-Data are GPS-PPT like. Every line is a position. Individual movements
-are identified by a single unique ID (track\_id). A few variables are
-available for every position but can be a NULL/NA (fail to record).
+This dataset is GPS-PPT like. Every line is a obtained position.
+Individual movements are identified by a single unique ID \[track\_id\].
+A few variables are available for every position but they can result a
+NULL/NA (fail to record).
 
 ### Notes & Tips
 
 -   Take care with projections. Data are provided in geographic (WGS84
     EPSG 4326) and projected reference systems (PT-TM06 EPSG 3763).
 
--   Use a raster elevation model to get elevation data from.
+-   Remember to deal with NA values when summarising.
 
--   Remember that some approaches will be easy with data.table package
-    (specially roll join).
+-   Use a raster elevation model to get elevation data from. We are not
+    providing any DEM raster for this test. For SRTM DEM the tiles for
+    Portugal are 35\_04 and 35\_05.
 
--   If running your analysis from Windows, you can import data directly
-    from github with:
+You may find it useful to programmatically download and read SRTM raster
+tiles directly from [this
+source](https://drive.google.com/drive/folders/17dnXkQKlF_fcqqETrHco5cVfF3R7kty0)
+- Remember that some questions will be easier to approach using
+data.table package (specially directional roll joins).
+
+    # Install and load packages
+    library(googledrive)
+    library(raster)
+
+    temp <- tempfile(fileext = ".zip")
+
+    # For tile srtm_35_05 the link is
+    # https://drive.google.com/file/d/1qtfX3EgSOfhgNCF01TyfXkXSAmBWwLFO/view?usp=sharing
+    # Retain tile_ID from the link above
+
+    # Download a ~20Mb zip file. 
+    # In the process a wizard will guide you to work with the API (use your Google account)
+    dl <- drive_download(
+      as_id("1qtfX3EgSOfhgNCF01TyfXkXSAmBWwLFO"), path = temp, overwrite = TRUE)
+
+    # Unzip to a temp folder (~170Mb asc file)
+    out <- unzip(temp, exdir = tempdir())
+
+    # Read asc raster from temp folder
+    tile1 <- raster(out[2])
+
+    # Plot to check
+    plot(tile1)
+
+-   If running your analysis from Windows operative system, you can
+    import data directly from github with:
 
 <!-- -->
 
