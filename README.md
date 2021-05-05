@@ -126,11 +126,14 @@ NULL/NA (fail to record).
     providing any DEM raster for this test. For SRTM DEM the tiles for
     Portugal are 35\_04 and 35\_05.
 
-You may find it useful to programmatically download and read SRTM raster
-tiles directly from [this
-source](https://drive.google.com/drive/folders/17dnXkQKlF_fcqqETrHco5cVfF3R7kty0)
-- Remember that some questions will be easier to approach using
-data.table package (specially directional roll joins).
+-   Remember that some questions will be easier to approach using
+    data.table package (specially directional roll joins).
+
+-   You may find it useful to programmatically download and read SRTM
+    raster tiles directly from [this
+    source](https://drive.google.com/drive/folders/17dnXkQKlF_fcqqETrHco5cVfF3R7kty0).
+
+<!-- -->
 
     # Install and load packages
     library(googledrive)

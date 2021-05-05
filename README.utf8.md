@@ -94,7 +94,8 @@ This dataset is GPS-PPT like. Every line is a obtained position. Individual move
 - You may find it useful to programmatically download and read SRTM raster tiles directly from [this source](https://drive.google.com/drive/folders/17dnXkQKlF_fcqqETrHco5cVfF3R7kty0).
 
 
-```{r, eval = F}
+
+```r
 # Install and load packages
 library(googledrive)
 library(raster)
@@ -123,7 +124,8 @@ plot(tile1)
 
 - If running your analysis from Windows operative system, you can import data directly from github with:
 
-```{r, eval = FALSE}
+
+```r
 dat_url <- 'https://raw.githubusercontent.com/pecard/testeR/master/data/e2p.rda?raw=true'
 download.file(dat_url,"e2p", method="curl")
 load("e2p")

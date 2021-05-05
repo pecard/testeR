@@ -28,3 +28,46 @@ adm1_pt <- sf::read_sf('D:/Google Drive/sig/bd_elementos_sig_projetos.gpkg', 'ad
 plot(adm1_pt)
 usethis::use_data(adm1_pt, overwrite = TRUE)
 
+# For tile srtm_35_05 the link is
+# https://drive.google.com/file/d/1qtfX3EgSOfhgNCF01TyfXkXSAmBWwLFO/view?usp=sharing
+# Retain tile_ID pnly from the link above
+
+tileID <- '1qtfX3EgSOfhgNCF01TyfXkXSAmBWwLFO'
+
+# Install and load googledrive package
+library(googledrive)
+library(raster)
+temp <- tempfile(fileext = ".zip")
+# Download a ~20Mb zip file.
+# In the process a wizard will guide you to work with the API (use your google account)
+dl <- drive_download(
+  as_id("1qtfX3EgSOfhgNCF01TyfXkXSAmBWwLFO"), path = temp, overwrite = TRUE)
+# Unzip to a temp folder (~170Mb asc file)
+out <- unzip(temp, exdir = tempdir())
+# Read asc raster
+tile1 <- raster(out[2])
+plot(tile1)
+
+# Install and load packages
+library(googledrive)
+library(raster)
+
+temp <- tempfile(fileext = ".zip")
+
+# For tile srtm_35_05 the link is
+# https://drive.google.com/file/d/1qtfX3EgSOfhgNCF01TyfXkXSAmBWwLFO/view?usp=sharing
+# Retain tile_ID from the link above
+
+# Download a ~20Mb zip file.
+# In the process a wizard will guide you to work with the API (use your Google account)
+dl <- drive_download(
+  as_id("1qtfX3EgSOfhgNCF01TyfXkXSAmBWwLFO"), path = temp, overwrite = TRUE)
+
+# Unzip to a temp folder (~170Mb asc file)
+out <- unzip(temp, exdir = tempdir())
+
+# Read asc raster from temp folder
+tile1 <- raster(out[2])
+
+# Plot to check
+plot(tile1)
