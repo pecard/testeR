@@ -23,9 +23,9 @@ usethis::use_data(tidepeak, overwrite = TRUE)
 adm0_pt <- sf::read_sf('D:/Google Drive/sig/bd_elementos_sig_projetos.gpkg', 'admin_limite_pt')
 
 adm1_pt <- sf::read_sf('D:/Google Drive/sig/bd_elementos_sig_projetos.gpkg', 'admin_distrito')
+adm1_pt <- adm1_pt[, 4]
 
-
-plot(adm1_pt)
+plot(adm1_pt[, 4])
 usethis::use_data(adm1_pt, overwrite = TRUE)
 
 # For tile srtm_35_05 the link is
