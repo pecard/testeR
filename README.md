@@ -33,7 +33,7 @@ code used.
 
 ## Your presentation
 
-You will prepare and present a 10 minutes talk with your achievements
+You will prepare and present a 5 minutes talk with your achievements
 for each test, focusing on the proposed questions and answering to the
 questions. Add the details you may think will help to understand it. You
 can use a R Markdown presentation, a Power Point presentation or any
