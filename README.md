@@ -159,8 +159,8 @@ NULL/NA (fail to record).
     # Plot to check
     plot(tile1)
 
--   If running your analysis from Windows operative system, you can
-    import data directly from github with:
+-   If running your analysis from Windows OS, you can import data
+    directly from github repo with:
 
 <!-- -->
 

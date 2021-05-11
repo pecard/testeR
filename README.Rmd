@@ -121,7 +121,7 @@ plot(tile1)
 ```
 
 
-- If running your analysis from Windows operative system, you can import data directly from github with:
+- If running your analysis from Windows OS, you can import data directly from github repo with:
 
 ```{r, eval = FALSE}
 dat_url <- 'https://raw.githubusercontent.com/pecard/testeR/master/data/e2p.rda?raw=true'
