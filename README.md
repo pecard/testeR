@@ -33,11 +33,11 @@ code used.
 
 ## Your presentation
 
-You will prepare and present a 5 minutes talk with your achievements
-for each test, focusing on the proposed questions and answering to the
-questions. Add the details you may think will help to understand it. You
-can use a R Markdown presentation, a Power Point presentation or any
-other resource that best fits your needs.
+You will prepare and present a 5 minutes talk with your achievements for
+each test, focusing on the critical aspects of the proposed questions.
+Add the details you may think will help to understand it. Be clear and
+concise. You can use a R Markdown presentation, a Power Point
+presentation or any other resource that best fits your needs.
 
 ## Test 1 - Wind Energy Production in Portugal
 
@@ -65,12 +65,12 @@ year of commissioning and installed capacity (using e2p data).
 
 You will find the data to work in the \~.data/ folder.
 
-| Data         | Description                                                        |
-|--------------|--------------------------------------------------------------------|
-| e2p.rda      | location of wind farms with name, date, coordinates and production |
-| adm0\_pt.rda | Administrative boundary of Portugal ( level 0 )                    |
-| adm1\_pt.rda | Administrative boundary of Portugal ( level 0 )                    |
-| rn2000.rda   | Natura 2000 Sites                                                  |
+| Data         | Description                                                    |
+|--------------|----------------------------------------------------------------|
+| e2p.rda      | Wind farm location with name, date, coordinates and production |
+| adm0\_pt.rda | Administrative boundary of Portugal ( level 0 )                |
+| adm1\_pt.rda | District boundaries ( level 1 )                                |
+| rn2000.rda   | Natura 2000 Sites                                              |
 
 ## Test 2 - Bird movement and tide height
 
