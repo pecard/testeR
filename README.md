@@ -21,9 +21,10 @@ website](https://posit.co/download/rstudio-desktop/).
 We’ve prepared two small tests for our recruitment process. The idea is
 that you will build the best approach to the problem and answer to the
 specific questions they propose. You will be asked to send us your
-approach and the main outputs in a short data report by Friday 7th.
-Remember that it will require a suite of packages: tidyverse, sf,
-data.table here, scales, raster, ggplot, and its dependencies.
+approach and the main outputs in a short data report by the end of the
+date agreed by email. Remember that it will require a suite of packages:
+tidyverse, sf, data.table here, scales, raster, ggplot, and its
+dependencies.
 
 ## Report Detail
 
