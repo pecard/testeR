@@ -49,7 +49,7 @@ presentation or any other resource that best fits your needs.
 - Map the wind facilities and and its distribution regarding elevation
   and protected areas.
 - Find the the appropriate theme for the digital elevation model.
-- What was the total national installed capacity (in GW) in 2021?
+- What was the total national installed capacity (in GW) in 2019?
 - How facilities are distributed in relation to altitude? plot the
   attitudinal distribution and describe.
 - How it has grown (installed GW) since the first installed facility?

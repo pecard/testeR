@@ -30,7 +30,7 @@ You can use a R Markdown presentation, a Power Point presentation or any other r
 - Map the wind energy facilities in mainland Portugal regarding the country and district borders. Apply the appropriate legend and choose one aggregation level (legend) to  wind energy facilities.
 - Map the wind facilities and and its distribution regarding elevation and protected areas. 
 - Find the the appropriate theme for the digital elevation model. 
-- What was the total national installed capacity (in GW) in 2021?
+- What was the total national installed capacity (in GW) in 2019?
 - How facilities are distributed in relation to altitude? plot the attitudinal distribution and describe.
 - How it has grown (installed GW) since the first installed facility?
 - Are protected areas affected? Where and to which extent (number of Sites)?
